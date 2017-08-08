@@ -1,0 +1,434 @@
+/*
+  Styles for the Colmar Academy project
+
+  Claude Catonio
+  5 august 2017 : top bar added
+ */
+
+/* ------------------------------------------------------------------- */
+/* Global styles                                                       */
+/* ------------------------------------------------------------------- */
+html {
+    font-size: 16px;
+    color: #4a4a4a;
+	background-color: white;
+}
+
+a {
+    color: #4a4a4a;
+    font-family: Lora, Georgia, Serif;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+p {
+	color: #575757;
+    font-family: "Open Sans", sans-serif;
+}
+
+span {
+    font-family: Georgia, Serif;
+}
+
+.containerLeft {
+    width: 60%;
+    padding: 2rem 1.5rem;
+}
+
+.containerRight {
+    width: 40%;
+    padding: 2rem 1.5rem 2rem 0;
+}
+
+img, video {
+    width: 100%;
+}
+
+h1 {
+    font-family: Lora, Georgia, Serif;
+	font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: Lora, Georgia, Serif;
+	font-size:2.25rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Lora, Georgia, Serif;
+	font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 992px) {
+    .containerLeft {
+        width: 100%;
+        padding: 0;
+    }
+    .containerRight {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
+
+/* The information block style                                         */
+/*     used in the introduction section and the these exhibit section  */
+
+/* for the left side */
+.leftInformation h2 {
+    margin: 2rem 0 1.5rem 0;
+}
+
+.leftInformation h3 {
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.leftInformation .author {
+    margin-top: 2rem;
+}
+
+/* for the right side */
+.information {
+    margin-right: -1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.information img {
+    width: 35%;
+}
+
+.information .image.mobile {
+    display: none;
+}
+
+.information .infoDescription {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.information .infoDescription * {
+    margin-bottom: 1rem;
+}
+
+.information .infoDescription a {
+    font-size: 1rem;
+    color: #5194e3;
+}
+
+/* ------------------------------------------------------------------- */
+/* Top bar                                                             */
+/* ------------------------------------------------------------------- */
+.topBar {
+	position: fixed;
+	z-index: 5;
+	background-color: white;
+	left: 0;
+    right: 0;
+	overflow-x: hidden;
+    height: 4rem;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* the logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a.logoLink {
+  font-weight: normal;
+}
+
+.logo img {
+    height: 3rem;
+}
+
+.logo span {
+    font-size: 1.5rem;
+}
+
+.logo span:nth-child(2n+0) {
+    font-weight: bold;
+}
+
+.logo span:last-child {
+    color: #9b9b9b;
+}
+
+/* site navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.topBar.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .topBar.desktop {
+        display: none;
+    }
+    .topBar.mobile {
+        display: flex;
+    }
+    .mobile img {
+        height: 32px;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* Top banner                                                          */
+/* ------------------------------------------------------------------- */
+.banner {
+	padding-top: 4rem;
+    background: #d8d8d8;
+    display: flex;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+}
+
+.jumbotron * {
+    margin-bottom: 1.5rem;
+}
+
+.jumbotron .button {
+    background-color: #444444;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .jumbotron {
+        margin: 0 1rem;
+    }
+    .jumbotron h1 {
+        margin: 0 0 2rem 0;
+    }
+    .jumbotron h3 {
+        margin: 0 0 1.5rem 0;
+    }
+    .jumbotron .button {
+        margin: 0;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* The introduction section                                            */
+/* ------------------------------------------------------------------- */
+.introduction {
+    display: flex;
+    background-color: #f3f5f5;
+}
+
+.introduction .containerRight {
+    border-left-width: 1px;
+    border-color: #d8d8d8;
+    border-style: solid;
+}
+
+.informationList {
+    display: flex;
+    flex-direction: column;
+}
+
+.informationList .information {
+    border-bottom-width: 1px;
+    border-color: #d8d8d8;
+    border-style: solid;
+}
+
+.informationList .information:first-child {
+    padding: 0rem 0 1rem 1rem;
+}
+
+.informationList .information:last-child {
+    background-color: #d8d8d8;
+}
+
+@media only screen and (max-width: 992px) {
+    .introduction .containerLeft {
+        display: none;
+    }
+
+    .introduction .information {
+        margin: 0;
+        padding: 0 0 3rem 0;
+        flex-direction: column;
+        align-items: stretch;
+        border-color: transparent;
+    }
+
+    .informationList .information:first-child {
+        padding: 0 0 3rem 0;
+    }
+    .informationList .information:last-child {
+        padding: 0;
+    }
+
+    .information img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .introduction .information img.desktop {
+        display: none;
+    }
+
+    .introduction .information .image.mobile {
+        display: inline;
+        padding: 0;
+        margin: 0;
+    }
+
+    .information .infoDescription {
+        margin: 2rem 1rem 4rem 1rem;
+    }
+
+    .introduction .information:last-child {
+        flex-direction: column;
+        margin: 0;
+        background-color: transparent;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* The learn section                                                   */
+/* ------------------------------------------------------------------- */
+.learn {
+	background-color: #eaebec;
+}
+
+.learn h2 {
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.learnCategories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 3.75rem;
+}
+
+.learnCategory {
+    min-width: 20%;
+	max-width: 28%;
+	margin: 0rem 1rem 2rem 0;
+	background-color: white;
+}
+
+.learnDescription {
+	padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.learnDescription p {
+	margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .learnCategories {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  padding: 0 1rem 2rem 1rem;
+    }
+
+    .learnCategory {
+      width: 100%;
+	  min-width: unset;
+	  max-width: unset;
+	  margin: 0rem 0rem 0.5rem 0;
+	  background-color: #d8d8d8;
+    }
+
+	.learn .desktop {
+	  display: none;
+	}
+}
+
+/* ------------------------------------------------------------------- */
+/* The thesis exhibit section                                          */
+/* ------------------------------------------------------------------- */
+.thesisExhibit {
+    background-color: #f3f5f5;
+}
+
+.thesisExhibit h2 {
+	padding: 2rem 0 0 0;
+	text-align: center;
+	width: 100%;
+}
+
+.thesisExhibitContent {
+    display: flex;
+}
+
+.studies .information:first-child {
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 992px) {
+  .thesisExhibit .desktop {
+	display: none;
+  }
+  .thesisExhibit .leftInformation {
+	padding-top: 1rem;
+ 	padding-bottom: 1.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------- */
+/* The footer section                                                  */
+/* ------------------------------------------------------------------- */
+footer {
+    background-color: #f3f5f5;
+    border-top-width: 1px;
+    border-top-color: #d8d8d8;
+    border-top-style: solid;
+    padding: 1rem 1.5rem 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: #4a4a4a;
+}
+
+@media only screen and (max-width: 992px) {
+    footer {
+      border-top-color: transparent;
+      padding: 1rem;
+      display: block;
+      color: #4a4a4a;
+    }
+	footer .desktop {
+		display: none;
+	}
+}
